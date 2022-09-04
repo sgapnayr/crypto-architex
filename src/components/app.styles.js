@@ -69,6 +69,10 @@ export const Charts = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .2s all ease-in-out;
+    @media (min-width: 1024px) {
+        transform: scale(.75);
+  }
 `
 
 /* INPUT */
@@ -108,7 +112,7 @@ export const CoinTable = styled.div`
     margin: 2rem .5rem -1rem .5rem;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.8);
     width: 85%;
-    height: 55vh;
+    height: 54vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -118,6 +122,9 @@ export const CoinTable = styled.div`
     &:hover {
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
     }
+    @media (min-width: 1024px) {
+        height: 45vh;
+  }
 `
 
 export const ListHeader = styled.div`
