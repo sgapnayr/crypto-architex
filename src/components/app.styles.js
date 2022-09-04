@@ -4,13 +4,17 @@ import styled from "styled-components";
 export const AppHeader = styled.div`
     display: flex;
     padding: 1vh 0 0 0;
-    margin: 2rem 0 0 0;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     background: transparent;
     z-index: 1;
+    transition: .2s all ease-in-out;
+    @media (min-width: 1024px) {
+        transform: scale(1.5);
+        margin: 1rem;
+  }
 `
 
 /* VIDEO */
@@ -51,15 +55,18 @@ export const CoinCharts = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
     border-radius: 5px;
-    height: 12rem;
+    height: 15rem;
     width: 50%;
     background:transparent;
     transition: .2s all ease-in-out;
     &:hover {
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
     }
+    @media (min-width: 1024px) {
+        margin: 3rem 0 2rem 0;
+  }
 `
 
 export const Charts = styled.div`
@@ -69,7 +76,7 @@ export const Charts = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .2s all ease-in-out;
+    transition: .05s all ease-in-out;
     @media (min-width: 1024px) {
         transform: scale(.75);
   }
