@@ -1,8 +1,35 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: none;
+  transition: .2s all ease-in-out;
+  color: white;
+}
+
+/* PRE */
+:root {
+  --primary-color: rgb(190, 190, 190);
+  --accent-color: #2ccaff;
+  --border-color: #ffffff;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Poppins;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +37,195 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  text-align: center;
+}
+
+/* MAIN */
+img {
+  width: 1.5rem;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+strong {
+  color: var(--accent-color);
+  text-shadow: 1px 1px 12px rgba(0, 0, 0, .3);
+  background: -webkit-linear-gradient(rgb(215, 246, 255), #2ccaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark strong {
+  color: rgb(191, 43, 255);
+  background: -webkit-linear-gradient(rgb(60, 60, 60), rgb(191, 43, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+bold {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* PERCENTAGE */
+.green {
+  color: green
+}
+
+.red {
+  color: red
+}
+
+/* PRICE */
+.price {
+  transition: .2s all ease-in-out;
+  cursor: pointer;
+}
+
+.price:hover {
+  color: var(--accent-color);
+}
+
+.dark .price:hover {
+  color: rgb(191, 43, 255)
+}
+
+/* CURRENCY SELECTOR */
+select {
+  font-size: small;
+  padding: .25vh 1vw;
+  margin: 1vw;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+  border: 1px solid rgba(0, 0, 0, .2);
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  transition: .1s all ease-in-out;
+  cursor: pointer;
+}
+
+select:hover {
+  background: rgba(190, 190, 190, .2);
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, .5);
+  border: 1px solid rgba(0, 0, 0, .1);
+  transform: scale(1.05)
+}
+
+/* ROUTING */
+.Link {
+  color: var(--accent-color);
+  transition: .2s all ease-in-out;
+  text-shadow: 1px 1px 12px rgba(0, 0, 0, .9);
+  font-weight: bold;
+}
+
+.Link:hover {
+  color: rgba(190, 190, 190, .2);
+}
+
+.dark .Link {
+  color: rgb(191, 43, 255)
+}
+
+.dark .Link:hover {
+  color: rgba(190, 190, 190, .2);
+}
+
+/* COIN PAGE */
+.CoinAll {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+}
+
+.CoinWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: .5rem;
+}
+
+.CoinImage {
+  margin: .5rem;
+}
+
+.CoinContent {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  width: 100%;
+  transition: .2s all ease-in-out;
+  cursor: pointer;
+  background: rgba(190, 190, 190, .2);
+}
+
+.CoinContent:hover {
+  background: rgba(190, 190, 190, .2);
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, .5);
+  transform: scale(1.05)
+}
+
+.CoinName {
+  font-weight: bold;
+}
+
+.CoinRank {
+  opacity: .4;
+  font-style: italic;
+}
+
+.CoinInfo {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  margin: 1rem;
+  height: 10rem;
+  text-align: center;
+  flex-direction: column;
+  overflow: scroll;
+  text-shadow: 1px 1px 16px rgba(255, 255, 255, .7);
+}
+
+/* BUTTON */
+button {
+  padding: .5rem;
+  margin: .5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+  border: none;
+  background: rgba(190, 190, 190, .2);
+  width: 20%;
+  transition: .2s all ease-in-out;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, .4);
+  transform: scale(1.05);
 }
