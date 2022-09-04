@@ -51,7 +51,7 @@ export const CoinCharts = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0 -1rem 0;
+    margin: 3rem 0 1rem 0;
     border-radius: 5px;
     height: 12rem;
     width: 50%;
