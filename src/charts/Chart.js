@@ -6,7 +6,7 @@ import axios from 'axios'
 
 export default function ShowChart(props) {
     const [apiData, setApiData] = useState([])
-    const url = `https://api.coingecko.com/api/v3/coins/${props.coinClicked}/market_chart?vs_currency=usd&days=1`
+    const url = `https://api.coingecko.com/api/v3/coins/${props.coinClicked}/market_chart?vs_currency=usd&days=30`
     console.log(url)
 
     async function GetData() {
@@ -21,7 +21,7 @@ export default function ShowChart(props) {
     const volumeLabels = apiData?.total_volumes?.map(el => new Date(el[0]).getDate().toString()).map(el => el.length === 1 ? `0${el}` : el)
 
     const data = {
-        labels: volumeLabels?.slice(0, 20),
+        labels: volumeLabels?.slice(0, 30),
         datasets: [
             {
                 label: props.coinClicked.toUpperCase(),
@@ -30,7 +30,7 @@ export default function ShowChart(props) {
                 borderColor: 'white',
                 fontStyle: "bold",
                 fill: false,
-                data: priceData?.slice(0, 20),
+                data: priceData?.slice(0, 30),
             }]
     }
 
