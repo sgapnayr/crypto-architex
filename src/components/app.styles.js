@@ -27,7 +27,7 @@ export const Video = styled.video`
     height: 100%;
     top: 0;
     left: 0;
-    filter: grayscale(0.22) brightness(0.70) contrast(1.5) saturate(1.9) sepia(0.10);
+    filter: grayscale(0.22) brightness(0.60) contrast(1.5) saturate(1.9) sepia(0.10);
     transition: .2s all ease-in-out;
 `
 
